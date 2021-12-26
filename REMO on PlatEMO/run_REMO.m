@@ -1,0 +1,1 @@
+main('-algorithm',@REMO,'-problem',@DTLZ5,'-N',50,'-D',30,'-evaluation',300,'-M',3,'-run',1);
