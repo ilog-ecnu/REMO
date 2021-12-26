@@ -11,12 +11,9 @@ function [Output,r] = GetOutput_PBI(varargin)
     if selfadapt
         delt_l =-20;
         delt_u = 20;
-        %[FrontNo,MaxFNo] = NDSort([Pop;Ref],size([Pop;Ref],1));
-        %r1_rate = sum(FrontNo == 1)/length(FrontNo);
+
         r = 0;
-        
-    %    if r1_rate< 0.9
-        
+                
         while r > 0.7 || r<0.3
             delt_c = (delt_l + delt_u)/2;
             if abs(delt_l-delt_u)<1e-1
@@ -29,22 +26,8 @@ function [Output,r] = GetOutput_PBI(varargin)
                delt_u =delt_c;
             end
         end
-   %     else
-%             while r < 0.50 || r>0.85
-%                 delt_c = (delt_l + delt_u)/2;
-%                 if abs(delt_l-delt_u)<1e-1
-%                     break;
-%                 end
-%                 [l,r] = split_data(Pop,Ref,delt_c);
-%                 if r>0.85
-%                    delt_l =delt_c;
-%                 elseif r < 0.50
-%                    delt_u =delt_c;
-%                 end
-%             end
-%             end
-            
-          
+
+                     
     else
         [l,~] = split_data(Pop,Ref,delt);
         
