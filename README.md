@@ -1,6 +1,8 @@
 # REMO
 Expensive Multiobjective Optimization by Relation Learning and Prediction
 
+The latest version of the code now supports PlatEMO v4.x, [link](https://github.com/hhyqhh/Relation-matlab/)
+
 ![REMO_framework](./figure/REMO_framework.png)
 
 This is the official implementation of **REMO** on `PlatEMO v2.8`.
